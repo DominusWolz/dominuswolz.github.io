@@ -1,0 +1,64 @@
+/* Reseteo básico de márgenes y tipografía */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #0f172a; /* Fondo azul oscuro (Slate 900) */
+    color: #f8fafc; /* Texto gris muy claro para contraste suave */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Flexbox para centrar todo el contenido en la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #60a5fa; /* Azul claro para destacar el título principal */
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #94a3b8; /* Tono apagado para el subtítulo */
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+p {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #cbd5e1;
+}
+
+/* Estilos del botón para un aspecto moderno */
+button {
+    background-color: #2563eb; /* Azul vibrante */
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+button:hover {
+    background-color: #1d4ed8; /* Azul más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Pequeña elevación */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+button:active {
+    transform: translateY(0); /* Efecto de "presionado" */
+}
