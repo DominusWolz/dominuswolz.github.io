@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Fútbol</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="contenedor-crud">
+        <h1>Inventario de Fútbol</h1>
+        
+        <!-- Formulario de ingreso/edición -->
+        <form id="formulario-producto">
+            <!-- Este input oculto nos servirá para saber si estamos editando o creando -->
+            <input type="hidden" id="indice-edicion" value="-1">
+            
+            <div class="grupo-inputs">
+                <input type="text" id="id-producto" placeholder="ID (Ej: F-01)" required>
+                <input type="text" id="nombre" placeholder="Nombre (Ej: Balón Qatar)" required>
+                <input type="number" id="precio" placeholder="Precio ($)" required>
+                <input type="number" id="cantidad" placeholder="Cantidad" required>
+            </div>
+            
+            <button type="submit" id="btn-guardar">Agregar Producto</button>
+        </form>
+
+        <!-- Tabla de datos -->
+        <table class="tabla-estilizada">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+                <!-- Los productos aparecerán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Conectamos la lógica del CRUD -->
+    <script src="crud.js"></script>
+</body>
+</html>
