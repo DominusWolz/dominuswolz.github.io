@@ -1,11 +1,10 @@
+/* Reseteo y fondo general */
 body {
     margin: 0;
     padding: 20px;
-    background-color: #0f172a; /* Fondo azul oscuro (Slate 900) */
-    color: #f8fafc; /* Texto gris muy claro para contraste suave */
+    background-color: #0f172a; 
+    color: #f8fafc; 
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    
-    /* Flexbox para centrar todo el contenido en la pantalla */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,14 +17,14 @@ body {
 h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    color: #60a5fa; /* Azul claro para destacar el título principal */
+    color: #60a5fa; 
     letter-spacing: -0.5px;
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #94a3b8; /* Tono apagado para el subtítulo */
+    color: #94a3b8; 
     margin-top: 0;
     margin-bottom: 2rem;
 }
@@ -38,33 +37,35 @@ p {
     color: #cbd5e1;
 }
 
-/* Estilos del botón para un aspecto moderno */
-button {
-    background-color: #2563eb; /* Azul vibrante */
+/* Diseño de botones y enlaces */
+.btn-enlace {
+    background-color: #2563eb; 
     color: #ffffff;
-    border: none;
+    text-decoration: none; 
     padding: 14px 32px;
     font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px;
+    border: none;
     cursor: pointer;
+    display: inline-block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease; /* Transición suave para el hover */
+    transition: all 0.3s ease; 
 }
 
-button:hover {
-    background-color: #1d4ed8; /* Azul más oscuro al pasar el cursor */
-    transform: translateY(-2px); /* Pequeña elevación */
+.btn-enlace:hover {
+    background-color: #1d4ed8; 
+    transform: translateY(-2px); 
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-button:active {
-    transform: translateY(0); /* Efecto de "presionado" */
+.btn-enlace:active {
+    transform: translateY(0);
 }
 
 /* Contenedor principal del CRUD */
 .contenedor-crud {
-    background-color: #1e293b; /* Azul un poco más claro que el fondo para destacar */
+    background-color: #1e293b; 
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -115,17 +116,24 @@ input:focus {
 
 /* Botones de acción en la tabla */
 .btn-editar {
-    background-color: #fbbf24; /* Amarillo/Dorado */
+    background-color: #fbbf24;
     color: #172033;
     padding: 6px 12px;
     font-size: 0.9rem;
     margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .btn-editar:hover { background-color: #f59e0b; }
 
 .btn-eliminar {
-    background-color: #ef4444; /* Rojo */
+    background-color: #ef4444; 
+    color: white;
     padding: 6px 12px;
     font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .btn-eliminar:hover { background-color: #dc2626; }

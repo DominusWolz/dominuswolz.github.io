@@ -13,7 +13,6 @@
         
         <!-- Formulario de ingreso/edición -->
         <form id="formulario-producto">
-            <!-- Este input oculto nos servirá para saber si estamos editando o creando -->
             <input type="hidden" id="indice-edicion" value="-1">
             
             <div class="grupo-inputs">
@@ -23,7 +22,7 @@
                 <input type="number" id="cantidad" placeholder="Cantidad" required>
             </div>
             
-            <button type="submit" id="btn-guardar">Agregar Producto</button>
+            <button type="submit" id="btn-guardar" class="btn-enlace">Agregar Producto</button>
         </form>
 
         <!-- Tabla de datos -->
@@ -43,7 +42,6 @@
         </table>
     </div>
 
-    <!-- Conectamos la lógica del CRUD -->
     <script src="crud.js"></script>
 </body>
 </html>
