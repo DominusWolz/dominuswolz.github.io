@@ -1,3 +1,4 @@
+alert("¡El archivo JS sí está conectado!");
 // 1. Importar las herramientas de Firebase desde internet
 import { initializeApp } from "firebase/app";
 
