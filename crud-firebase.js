@@ -1,6 +1,5 @@
-alert("¡El archivo JS sí está conectado!");
-// 1. Importar las herramientas de Firebase desde internet
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBg1FTlCFCnJWMmhGxh8CiXVBmGHEXNy1U",
