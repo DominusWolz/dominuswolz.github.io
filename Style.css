@@ -137,3 +137,10 @@ input:focus {
     cursor: pointer;
 }
 .btn-eliminar:hover { background-color: #dc2626; }
+
+footer {
+    margin-top: auto;
+    padding-top: 40px;
+    color: #64748b; /* Gris azulado más oscuro para no quitar atención al centro */
+    font-size: 0.9rem;
+}
