@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario - Fútbol</title>
-    <link rel="stylesheet" href="Style.css">
+    
+    <link rel="stylesheet" href="../css/Style.css">
 </head>
 <body>
 
     <div class="contenedor-crud">
         <h1>Inventario de Fútbol</h1>
         
-        <!-- Formulario de ingreso/edicion -->
         <form id="formulario-producto">
             <input type="hidden" id="indice-edicion" value="-1">
             
@@ -25,7 +25,6 @@
             <button type="submit" id="btn-guardar" class="btn-enlace">Agregar Producto</button>
         </form>
 
-        <!-- Tabla de datos -->
         <table class="tabla-estilizada">
             <thead>
                 <tr>
@@ -41,6 +40,7 @@
         </table>
     </div>
 
-    <script src="crud.js"></script>
+    
+    <script src="../js/crud.js"></script>
 </body>
 </html>
