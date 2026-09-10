@@ -60,36 +60,42 @@ async function cargarDatos() {
 }
 
 // --- COMANDO 2: CREAR O ACTUALIZAR DATOS ---
+// --- GUARDAR / ACTUALIZAR ---
 formulario.addEventListener('submit', async function(e) {
     e.preventDefault(); 
     
-    btnGuardar.textContent = "Guardando...";
-    btnGuardar.disabled = true;
-
     const id = document.getElementById('id-producto').value;
     const nombre = document.getElementById('nombre').value;
     const precio = document.getElementById('precio').value;
     const cantidad = document.getElementById('cantidad').value;
     const modoEdicion = inputIndice.value;
 
+    
+    if (Number(precio) <= 0 || Number(cantidad) <= 0) {
+        alert("⚠️ Error: El precio y la cantidad deben ser mayores a 0.");
+        return; 
+    }
+    // ------------------------
+
+    
+    btnGuardar.textContent = "Guardando...";
+    btnGuardar.disabled = true;
+
     const datosGuardar = { id, nombre, precio, cantidad };
 
     try {
         if (modoEdicion === "-1") {
-            // Guardar nuevo producto
             await addDoc(coleccionProductos, datosGuardar);
         } else {
-            // Actualizar producto existente
             const documentoRef = doc(db, "productos_futbol", idEdicion);
             await updateDoc(documentoRef, datosGuardar);
             inputIndice.value = "-1";
         }
-        
         formulario.reset();
         await cargarDatos(); 
     } catch (error) {
-        console.error("Error guardando:", error);
-        alert("Hubo un error al guardar. Revisa la consola (F12).");
+        console.error("Error al guardar:", error);
+        alert("Hubo un error al guardar. Revisa la consola.");
     } finally {
         btnGuardar.textContent = "Agregar Producto";
         btnGuardar.disabled = false;

@@ -18,8 +18,8 @@
             <div class="grupo-inputs">
                 <input type="text" id="id-producto" placeholder="ID (Ej: F-01)" required>
                 <input type="text" id="nombre" placeholder="Nombre (Ej: Balón Qatar)" required>
-                <input type="number" id="precio" placeholder="Precio ($)" required>
-                <input type="number" id="cantidad" placeholder="Cantidad" required>
+                <input type="number" id="precio" placeholder="Precio ($)" min="1" required>
+                <input type="number" id="cantidad" placeholder="Cantidad" min="1" required>
             </div>
             
             <button type="submit" id="btn-guardar" class="btn-enlace">Agregar Producto</button>

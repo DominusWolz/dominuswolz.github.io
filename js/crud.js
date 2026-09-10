@@ -42,6 +42,13 @@ formulario.addEventListener('submit', function(e) {
     const cantidad = document.getElementById('cantidad').value;
     const indice = inputIndice.value;
 
+    // --- NUEVA VALIDACIÓN ---
+    if (Number(precio) <= 0 || Number(cantidad) <= 0) {
+        alert("⚠️ Error: El precio y la cantidad deben ser mayores a 0.");
+        return; // Esto detiene la función y evita que se guarde el producto
+    }
+    // ------------------------
+
     const nuevoProducto = { id, nombre, precio, cantidad };
 
     if (indice === "-1") {
